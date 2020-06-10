@@ -23,7 +23,7 @@ For more examples, take a look at the *logics* directory.
 
 ### Input Formulas
 
-The classical connectives are represented by the predicates *neg*, *and*, as well as *or*. Choice connectives are encoded as the ternary predicate *pref*. The first argument of *pref* tells us which choice connective we are dealing with. 
+The classical connectives are represented by the predicates *neg*, *and*, as well as *or*. Choice connectives are encoded via the ternary predicate *pref*. The first argument of *pref* tells us which choice connective we are dealing with. 
 
 Some problems require only a single input formula, which must be contained in the *inputformula* predicate.
 
@@ -44,19 +44,21 @@ inputformula2(
 ).
 ```
 
-### Show all models of some input formula:
+### Solving Problems
+
+Show all models of some input formula:
 
 ```clingo base.lp input.lp logic.lp models.lp 0```
 
-###  preferred models of some input formula:
+Show preferred models of some input formula:
 
 ```clingo --opt-mode=optN --quiet=1 base.lp input.lp logic.lp pref_models.lp```
 
-### Check whether two formulas are degree equivalent:
+Check whether two formulas are degree equivalent:
 
 ```clingo base.lp input.lp logic.lp degree_equiv.lp```
 
-### Check whether two formulas are fully equivalent:
+Check whether two formulas are fully equivalent:
 
 ```clingo base.lp input.lp logic.lp fully_equiv.lp```
 
