@@ -19,7 +19,7 @@ degOut('qcl', Opt1, Deg1, Opt2, Deg2, Deg1) :- degIn('qcl', Opt1, Deg1, Opt2, De
 degOut('qcl', Opt1, Deg1, Opt2, Deg2, Deg2 + Opt1) :- degIn('qcl', Opt1, Deg1, Opt2, Deg2), Deg1 = #sup, Deg2 < #sup.
 degOut('qcl', Opt1, Deg1, Opt2, Deg2, #sup) :- degIn('qcl', Opt1, Deg1, Opt2, Deg2), Deg1 = #sup, Deg2 = #sup.
 ```
-For more examples, take a look at the *logics* directory.
+For more examples, take a look at the *logics/* directory.
 
 ### Input Formulas
 
@@ -60,11 +60,15 @@ The code in *base.lp* does not need to be modified. Below, replace *input.lp* wi
 
 ```clingo base.lp input.lp logic.lp degree_equiv.lp```
 
+Note that we are actually checking for the compliment problem, i.e. the above program is unsatisfiable if and only if the two input formulas are degree equivalent.
+
 #### Check whether two formulas are fully equivalent
 
 ```clingo base.lp input.lp logic.lp fully_equiv.lp```
 
-Note that for QCL, strong equivalence and full equivalence are identical.
+Again, we are checking for the compliment problem, i.e. the above program is unsatisfiable if and only if the two input formulas are fully equivalent.
+
+Note that for QCL, strong equivalence and full equivalence are identical. 
 
 
 ## References
