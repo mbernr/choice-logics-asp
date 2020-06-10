@@ -33,7 +33,7 @@ inputformula(
 ).
 ```
 
-Some problems, such as checking for equivalence, require two input formulas. These must be contained in the *inputformula1*  and *inputformula2* predicats.
+Some problems, such as checking for equivalence, require two input formulas. These must be contained in the *inputformula1*  and *inputformula2* predicates.
 
 ```
 inputformula1(
@@ -46,19 +46,21 @@ inputformula2(
 
 ### Solving Problems
 
-Show all models of some input formula:
+The code in *base.lp* does not need to be modified. Below, replace *input.lp* with the file containing your input formula, and replace *logic.lp* with the file containing the semantics of your choice connectives.
+
+#### Show all models of some input formula
 
 ```clingo base.lp input.lp logic.lp models.lp 0```
 
-Show preferred models of some input formula:
+#### Show preferred models of some input formula
 
 ```clingo --opt-mode=optN --quiet=1 base.lp input.lp logic.lp pref_models.lp```
 
-Check whether two formulas are degree equivalent:
+#### Check whether two formulas are degree equivalent
 
 ```clingo base.lp input.lp logic.lp degree_equiv.lp```
 
-Check whether two formulas are fully equivalent:
+#### Check whether two formulas are fully equivalent
 
 ```clingo base.lp input.lp logic.lp fully_equiv.lp```
 
