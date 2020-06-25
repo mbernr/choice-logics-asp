@@ -1,4 +1,4 @@
 
 inputformula(
-    pref('l4',pref('l4',a,b),c)
+    pref('l4',a,pref('l4',b,c))
 ).
